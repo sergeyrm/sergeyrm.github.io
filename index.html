@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Имя артиста — Музыка</title>
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --text: #eaeaea;
+      --muted: #9a9a9a;
+      --accent: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      padding: 80px 24px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      margin-top: 64px;
+      margin-bottom: 24px;
+    }
+
+    p {
+      max-width: 640px;
+      color: var(--muted);
+    }
+
+    .hero span {
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .music {
+      display: grid;
+      gap: 32px;
+    }
+
+    iframe {
+      width: 100%;
+      border-radius: 12px;
+      border: none;
+    }
+
+    .contacts {
+      margin-top: 80px;
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .contacts a {
+      color: var(--text);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+
+    .contacts a:hover {
+      border-color: var(--accent);
+    }
+
+    footer {
+      margin-top: 120px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <section class="hero">
+      <h1>Имя артиста</h1>
+      <span>музыка / электронная / эмбиент</span>
+    </section>
+
+    <section>
+      <h2>Музыка</h2>
+      <div class="music">
+
+        <!-- Пример: Яндекс Музыка -->
+        <iframe src="https://music.yandex.ru/iframe/#album/0000000"></iframe>
+
+        <!-- Пример: Apple Music -->
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="max-width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/album-name/id000000000"></iframe>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>О себе</h2>
+      <p>
+        Короткий текст о тебе, подходе к музыке и атмосфере.
+        Без лишних слов — только суть.
+      </p>
+    </section>
+
+    <section class="contacts">
+      <a href="#">Instagram</a>
+      <a href="#">Telegram</a>
+      <a href="mailto:email@example.com">Email</a>
+    </section>
+
+    <footer>
+      © Имя артиста, 2026
+    </footer>
+
+  </div>
+
+</body>
+</html>
