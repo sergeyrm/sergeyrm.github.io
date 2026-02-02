@@ -7,7 +7,8 @@
 
   <style>
     :root {
-      --bg: #0f0f0f;
+      --bg: #0b0b0c;
+      --bg-soft: #141416;
       --text: #eaeaea;
       --muted: #9a9a9a;
       --accent: #ffffff;
@@ -26,48 +27,87 @@
     }
 
     .container {
-      max-width: 900px;
-      padding: 80px 24px;
+      max-width: 1000px;
+      padding: 96px 24px;
+      margin: 0 auto;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 140px 24px 120px;
+      background: linear-gradient(180deg, #0a0a0b 0%, #141416 100%);
+    }
+
+    .hero-inner {
+      max-width: 1000px;
       margin: 0 auto;
     }
 
     h1 {
-      font-size: 48px;
+      font-size: 52px;
       font-weight: 500;
       letter-spacing: -0.02em;
-      margin-bottom: 8px;
+      margin: 0 0 12px;
     }
 
-    h2 {
-      font-size: 24px;
-      font-weight: 400;
-      margin-top: 64px;
-      margin-bottom: 24px;
-    }
-
-    p {
-      max-width: 640px;
-      color: var(--muted);
-    }
-
-    .hero span {
+    .subtitle {
       color: var(--muted);
       font-size: 18px;
     }
 
+    /* SECTIONS */
+    section {
+      margin-top: 120px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 400;
+      margin-bottom: 32px;
+    }
+
+    p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    /* ABOUT / BLOG */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 16px;
+      opacity: 0.9;
+    }
+
+    .caption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 12px;
+    }
+
+    /* MUSIC */
     .music {
       display: grid;
-      gap: 32px;
+      gap: 40px;
+      margin-top: 40px;
     }
 
     iframe {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 14px;
       border: none;
     }
 
+    /* CONTACTS */
     .contacts {
-      margin-top: 80px;
+      margin-top: 120px;
       display: flex;
       gap: 24px;
       flex-wrap: wrap;
@@ -78,56 +118,77 @@
       text-decoration: none;
       border-bottom: 1px solid rgba(255,255,255,0.2);
       padding-bottom: 2px;
-      transition: border-color 0.2s;
-    }
-
-    .contacts a:hover {
-      border-color: var(--accent);
     }
 
     footer {
-      margin-top: 120px;
+      margin-top: 140px;
       color: var(--muted);
       font-size: 14px;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+
       h1 {
-        font-size: 36px;
+        font-size: 40px;
       }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-
-    <section class="hero">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
       <h1>Имя артиста</h1>
-      <span>музыка / электронная / эмбиент</span>
-    </section>
+      <div class="subtitle">музыка / электронная / эмбиент</div>
+    </div>
+  </header>
 
+  <main class="container">
+
+    <!-- ABOUT / BLOG -->
     <section>
-      <h2>Музыка</h2>
-      <div class="music">
+      <h2>Обо мне и услугах</h2>
 
-        <!-- Пример: Яндекс Музыка -->
-        <iframe src="https://music.yandex.ru/iframe/#album/0000000"></iframe>
+      <div class="about">
+        <div>
+          <p>
+            Здесь текст о тебе: подход к музыке, опыт, жанры, философия.
+            Можно писать спокойно, как в блоге, без маркетингового шума.
+          </p>
+          <p>
+            Ниже или выше можно описать услуги: написание музыки,
+            саунд-дизайн, сотрудничество, лицензирование.
+          </p>
+        </div>
 
-        <!-- Пример: Apple Music -->
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="max-width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/album-name/id000000000"></iframe>
-
+        <div>
+          <img src="https://via.placeholder.com/600x800" alt="Фото" />
+          <div class="caption">Фото / подпись / проект</div>
+        </div>
       </div>
     </section>
 
+    <!-- MUSIC -->
     <section>
-      <h2>О себе</h2>
+      <h2>Музыка</h2>
       <p>
-        Короткий текст о тебе, подходе к музыке и атмосфере.
-        Без лишних слов — только суть.
+        Треки и релизы, которые напрямую связаны с текстом выше.
       </p>
+
+      <div class="music">
+        <!-- Яндекс Музыка -->
+        <iframe src="https://music.yandex.ru/iframe/#album/0000000"></iframe>
+
+        <!-- Apple Music -->
+        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="max-width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/album-name/id000000000"></iframe>
+      </div>
     </section>
 
+    <!-- CONTACTS -->
     <section class="contacts">
       <a href="#">Instagram</a>
       <a href="#">Telegram</a>
@@ -138,7 +199,7 @@
       © Имя артиста, 2026
     </footer>
 
-  </div>
+  </main>
 
 </body>
 </html>
