@@ -3,15 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Сергей Р.</title>
+  <title>Имя артиста — Музыка</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b0b0c;
-      --bg-soft: #141416;
-      --text: #eaeaea;
-      --muted: #9a9a9a;
-      --accent: #ffffff;
+      --black: #0a0a0b;
+      --metal-dark: #0f1012;
+      --text: #e8e8ea;
+      --muted: #9a9aa0;
     }
 
     * {
@@ -20,186 +24,194 @@
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
-      background: var(--bg);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 80% -10%, #1b1c20 0%, transparent 60%),
+        linear-gradient(180deg, var(--metal-dark) 0%, var(--black) 60%);
       color: var(--text);
-      line-height: 1.6;
-    }
-
-    .container {
-      max-width: 1000px;
-      padding: 96px 24px;
-      margin: 0 auto;
+      line-height: 1.65;
+      letter-spacing: 0.01em;
     }
 
     /* HERO */
-    .hero {
-      padding: 140px 24px 120px;
-      background: linear-gradient(180deg, #0a0a0b 0%, #141416 100%);
+    header.hero {
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background:
+        linear-gradient(120deg, #0b0c0e 0%, #16171b 40%, #0b0c0e 100%),
+        radial-gradient(800px 400px at 50% 0%, #2a2b30 0%, transparent 70%);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
     }
 
     .hero-inner {
-      max-width: 1000px;
-      margin: 0 auto;
+      max-width: 800px;
+      padding: 0 24px;
     }
 
     h1 {
-      font-size: 52px;
+      font-size: 56px;
       font-weight: 500;
       letter-spacing: -0.02em;
-      margin: 0 0 12px;
+      margin-bottom: 16px;
     }
 
     .subtitle {
-      color: var(--muted);
       font-size: 18px;
+      color: var(--muted);
     }
 
-    /* SECTIONS */
+    /* MAIN */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 140px 24px;
+    }
+
     section {
-      margin-top: 120px;
+      margin-bottom: 160px;
     }
 
     h2 {
-      font-size: 26px;
-      font-weight: 400;
-      margin-bottom: 32px;
+      font-size: 28px;
+      font-weight: 500;
+      margin-bottom: 40px;
     }
 
     p {
       max-width: 720px;
-      color: var(--muted);
       font-size: 17px;
+      color: var(--muted);
+      margin-bottom: 24px;
     }
 
-    /* ABOUT / BLOG */
+    /* ABOUT */
     .about {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: start;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 80px;
     }
 
-    .about img {
+    .photos {
+      display: grid;
+      gap: 32px;
+    }
+
+    .photos img {
       width: 100%;
-      border-radius: 16px;
-      opacity: 0.9;
+      border-radius: 18px;
+      filter: grayscale(100%) contrast(1.05);
+      opacity: 0.92;
     }
 
-    .caption {
+    .photos figcaption {
+      margin-top: 10px;
       font-size: 14px;
       color: var(--muted);
-      margin-top: 12px;
     }
 
-    /* MUSIC */
-    .music {
+    /* MUSIC LINKS */
+    .music-links {
       display: grid;
-      gap: 40px;
-      margin-top: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      border-radius: 14px;
-      border: none;
-    }
-
-    /* CONTACTS */
-    .contacts {
-      margin-top: 120px;
-      display: flex;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 24px;
-      flex-wrap: wrap;
+      margin-top: 48px;
     }
 
-    .contacts a {
-      color: var(--text);
+    .music-links a {
+      display: block;
+      padding: 20px 24px;
+      border-radius: 16px;
       text-decoration: none;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-      padding-bottom: 2px;
+      color: var(--text);
+      background: linear-gradient(135deg, #14151a, #1e2026, #14151a);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .music-links a span {
+      display: block;
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 6px;
     }
 
     footer {
-      margin-top: 140px;
-      color: var(--muted);
+      text-align: center;
       font-size: 14px;
+      color: var(--muted);
+      padding: 80px 24px 40px;
+      border-top: 1px solid rgba(255,255,255,0.06);
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 900px) {
+      h1 {
+        font-size: 42px;
+      }
       .about {
         grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 40px;
+        gap: 64px;
       }
     }
   </style>
 </head>
+
 <body>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="hero-inner">
-      <h1>Сергей Р.</h1>
-      <div class="subtitle">Создаём музыку вместе</div>
+      <h1>Имя артиста</h1>
+      <div class="subtitle">музыка / электронная / эмбиент</div>
     </div>
   </header>
 
-  <main class="container">
+  <main>
 
-    <!-- ABOUT / BLOG -->
     <section>
-      <h2>Обо мне и услугах</h2>
-
+      <h2>Обо мне</h2>
       <div class="about">
         <div>
           <p>
-            Здесь текст о тебе: подход к музыке, опыт, жанры, философия.
-            Можно писать спокойно, как в блоге, без маркетингового шума.
+            Я работаю с электронной музыкой, текстурами и атмосферой.
+            Проекты варьируются от авторских релизов до прикладной музыки
+            для визуальных и коммерческих задач.
           </p>
           <p>
-            Ниже или выше можно описать услуги: написание музыки,
-            саунд-дизайн, сотрудничество, лицензирование.
+            Открыт к сотрудничеству, написанию музыки под проекты,
+            лицензированию треков и долгосрочной работе.
           </p>
         </div>
-
-        <div>
-          <img src="https://via.placeholder.com/600x800" alt="Фото" />
-          <div class="caption">Фото / подпись / проект</div>
+        <div class="photos">
+          <figure>
+            <img src="https://via.placeholder.com/600x400" alt="Фото 1">
+            <figcaption>Студия / процесс</figcaption>
+          </figure>
+          <figure>
+            <img src="https://via.placeholder.com/600x400" alt="Фото 2">
+            <figcaption>Проект / лайв</figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- MUSIC -->
     <section>
-      <h2>Музыка</h2>
-      <p>
-        Треки и релизы, которые напрямую связаны с текстом выше.
-      </p>
+      <h2>Музыка и площадки</h2>
+      <p>Основные релизы и площадки, где можно послушать музыку полностью.</p>
 
-      <div class="music">
-        <!-- Яндекс Музыка -->
-        <iframe src="https://music.yandex.ru/iframe/#album/0000000"></iframe>
-
-        <!-- Apple Music -->
-        <iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="max-width:100%;overflow:hidden;background:transparent;" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/ru/album/album-name/id000000000"></iframe>
+      <div class="music-links">
+        <a href="#">Apple Music<span>Альбомы и синглы</span></a>
+        <a href="#">Яндекс Музыка<span>Каталог и плейлисты</span></a>
+        <a href="#">Spotify<span>Международные релизы</span></a>
+        <a href="#">SoundCloud<span>Черновики и эксперименты</span></a>
       </div>
     </section>
-    
-    <!-- CONTACTS -->
-    <section class="contacts">
-      <a href="#">Instagram</a>
-      <a href="#">Telegram</a>
-      <a href="mailto:email@example.com">Email</a>
-    </section>
-
-    <footer>
-      © Имя артиста, 2026
-    </footer>
 
   </main>
+
+  <footer>
+    © Имя артиста, 2026
+  </footer>
 
 </body>
 </html>
