@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Имя артиста — Музыка v4</title>
+  <title>Имя артиста — Музыка v5</title>
 
-  <!-- Google Fonts -->
+  <!-- ШРИФТ: СЕРЬЁЗНЫЙ, ДИЗАЙНЕРСКИЙ, С КИРИЛЛИЦЕЙ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
 
   <style>
     :root {
-      --text: #e8e8ea;
+      --text: #e6e6e8;
       --muted: #9a9aa0;
     }
 
@@ -20,60 +20,90 @@
       box-sizing: border-box;
     }
 
-    /* ФОН НА ВЕСЬ САЙТ */
+    /* ===== ФОН НА ВЕСЬ САЙТ ===== */
     body {
-  margin: 0;
-  font-family: 'PT Serif', serif;
-  color: var(--text);
-  line-height: 1.65;
-  letter-spacing: 0.01em;
+      margin: 0;
+      font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text);
+      line-height: 1.65;
+      letter-spacing: 0.01em;
 
-  background:
-    radial-gradient(
-      900px 500px at 75% 20%,
-      rgba(255,255,255,0.08),
-      transparent 60%
-    ),
-    linear-gradient(
-      135deg,
-      #050506 0%,
-      #1b1c22 30%,
-      #0d0e12 55%,
-      #050506 100%
-    );
-}
+      background:
+        radial-gradient(
+          900px 500px at 70% 5%,
+          rgba(255,255,255,0.10),
+          transparent 60%
+        ),
+        linear-gradient(
+          140deg,
+          #070708 0%,
+          #1a1b20 35%,
+          #0e0f14 65%,
+          #070708 100%
+        );
+    }
 
-    /* HERO */
-   header.hero {
-  background: none;
-}
+    /* ===== HERO ===== */
+    header.hero {
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* МЕТАЛЛИЧЕСКИЙ СВЕТОВОЙ СЛОЙ */
+    header.hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          120deg,
+          transparent 0%,
+          rgba(255,255,255,0.06) 45%,
+          rgba(255,255,255,0.12) 50%,
+          rgba(255,255,255,0.06) 55%,
+          transparent 100%
+        );
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
     .hero-inner {
-      max-width: 800px;
+      max-width: 900px;
       padding: 0 24px;
+      position: relative;
+      z-index: 1;
     }
 
     h1 {
-      font-size: 56px;
+      font-size: 64px;
       font-weight: 500;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      letter-spacing: -0.035em;
+      margin: 0 0 18px;
+      text-align: center;
     }
 
     .subtitle {
       font-size: 18px;
+      font-weight: 400;
       color: var(--muted);
-      margin-bottom: 0;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
-    /* MAIN */
+    /* ===== MAIN ===== */
     main {
       max-width: 1100px;
       margin: 0 auto;
-      padding: 80px 24px;
+      padding: 100px 24px;
     }
 
     section {
-      margin-bottom: 100px;
+      margin-bottom: 120px;
     }
 
     h2 {
@@ -89,11 +119,11 @@
       margin-bottom: 16px;
     }
 
-    /* ABOUT */
+    /* ===== ABOUT ===== */
     .about {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
-      gap: 48px;
+      gap: 56px;
     }
 
     .photos {
@@ -114,7 +144,7 @@
       color: var(--muted);
     }
 
-    /* MUSIC LINKS */
+    /* ===== MUSIC LINKS ===== */
     .music-links {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -124,12 +154,18 @@
 
     .music-links a {
       display: block;
-      padding: 20px 24px;
+      padding: 22px 26px;
       border-radius: 16px;
       text-decoration: none;
       color: var(--text);
-      background: linear-gradient(135deg, #14151a 0%, #1e2026 50%, #14151a 100%);
-      border: 1px solid rgba(255,255,255,0.08);
+      background:
+        linear-gradient(
+          135deg,
+          #14151a 0%,
+          #24262d 45%,
+          #14151a 100%
+        );
+      border: 1px solid rgba(255,255,255,0.10);
     }
 
     .music-links a span {
@@ -139,7 +175,7 @@
       margin-top: 6px;
     }
 
-    /* FOOTER */
+    /* ===== FOOTER ===== */
     footer {
       text-align: center;
       font-size: 14px;
@@ -150,8 +186,9 @@
 
     @media (max-width: 900px) {
       h1 {
-        font-size: 42px;
+        font-size: 44px;
       }
+
       .about {
         grid-template-columns: 1fr;
         gap: 64px;
@@ -164,7 +201,7 @@
   <header class="hero">
     <div class="hero-inner">
       <h1>Имя артиста</h1>
-      <div class="subtitle">музыка / электронная / эмбиент</div>
+      <div class="subtitle">электронная музыка / эмбиент</div>
     </div>
   </header>
 
@@ -174,9 +211,17 @@
       <h2>Обо мне</h2>
       <div class="about">
         <div>
-          <p>Я работаю с электронной музыкой, текстурами и атмосферой. Проекты варьируются от авторских релизов до прикладной музыки для визуальных и коммерческих задач.</p>
-          <p>Открыт к сотрудничеству, написанию музыки под проекты, лицензированию треков и долгосрочной работе.</p>
+          <p>
+            Я работаю с электронной музыкой, текстурами и атмосферой.
+            Проекты варьируются от авторских релизов до прикладной музыки
+            для визуальных и коммерческих задач.
+          </p>
+          <p>
+            Открыт к сотрудничеству, написанию музыки под проекты,
+            лицензированию треков и долгосрочной работе.
+          </p>
         </div>
+
         <div class="photos">
           <figure>
             <img src="https://via.placeholder.com/600x400" alt="Фото 1">
@@ -193,6 +238,7 @@
     <section>
       <h2>Музыка и площадки</h2>
       <p>Основные релизы и площадки, где можно послушать музыку полностью.</p>
+
       <div class="music-links">
         <a href="#">Apple Music<span>Альбомы и синглы</span></a>
         <a href="#">Яндекс Музыка<span>Каталог и плейлисты</span></a>
