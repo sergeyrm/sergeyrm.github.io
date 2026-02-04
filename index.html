@@ -24,11 +24,25 @@
     body {
   margin: 0;
   font-family: 'PT Serif', serif;
-  background: linear-gradient(145deg, #0b0c0e 0%, #1a1b20 25%, #0e0f12 60%, #0a0a0b 100%);
   color: var(--text);
   line-height: 1.65;
   letter-spacing: 0.01em;
+
+  background:
+    radial-gradient(
+      900px 500px at 75% 10%,
+      rgba(255,255,255,0.08),
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      #050506 0%,
+      #1b1c22 30%,
+      #0d0e12 55%,
+      #050506 100%
+    );
 }
+
     /* HERO */
    header.hero {
   background: none;
