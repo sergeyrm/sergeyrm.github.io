@@ -3,96 +3,128 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Имя артиста — Музыка v5</title>
+  <title>Имя артиста — Музыка v6</title>
 
-  <!-- ШРИФТ: СЕРЬЁЗНЫЙ, ДИЗАЙНЕРСКИЙ, С КИРИЛЛИЦЕЙ -->
+  <!-- Шрифт: современный, дорогой, отлично для кириллицы -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
 
   <style>
     :root {
-      --text: #e6e6e8;
-      --muted: #9a9aa0;
+      --bg-dark: #0e0f12;
+      --bg-mid: #1b1c22;
+      --bg-light: #2a2c33;
+
+      --text-main: #e5e6ea;
+      --text-muted: #9b9ea7;
+
+      --metal-light: rgba(255,255,255,0.35);
+      --metal-soft: rgba(255,255,255,0.12);
+
+      --accent-cold: #bfc6ff;
     }
 
     * {
       box-sizing: border-box;
     }
 
-    /* ===== ФОН НА ВЕСЬ САЙТ ===== */
+    /* ===== ОБЩИЙ ФОН ===== */
     body {
       margin: 0;
       font-family: 'Manrope', -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
+      color: var(--text-main);
       line-height: 1.65;
       letter-spacing: 0.01em;
 
       background:
         radial-gradient(
-          900px 500px at 70% 5%,
+          1200px 700px at 80% -10%,
           rgba(255,255,255,0.10),
           transparent 60%
         ),
         linear-gradient(
           140deg,
-          #070708 0%,
-          #1a1b20 35%,
-          #0e0f14 65%,
-          #070708 100%
+          #14151a 0%,
+          #1f2128 35%,
+          #181a1f 65%,
+          #121318 100%
         );
     }
 
     /* ===== HERO ===== */
     header.hero {
-      min-height: 75vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       position: relative;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 100px 0 80px;
+      text-align: center;
+      overflow: hidden;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-    /* МЕТАЛЛИЧЕСКИЙ СВЕТОВОЙ СЛОЙ */
-    header.hero::before {
+    /* декоративные металлические линии */
+    header.hero::before,
+    header.hero::after {
       content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--metal-light),
+        transparent
+      );
+    }
+
+    header.hero::before {
+      top: 40px;
+      opacity: 0.35;
+    }
+
+    header.hero::after {
+      bottom: 30px;
+      opacity: 0.2;
+    }
+
+    /* световой металлический блик */
+    header.hero .shine {
       position: absolute;
       inset: 0;
       background:
         linear-gradient(
           120deg,
           transparent 0%,
-          rgba(255,255,255,0.06) 45%,
-          rgba(255,255,255,0.12) 50%,
-          rgba(255,255,255,0.06) 55%,
+          rgba(255,255,255,0.08) 45%,
+          rgba(255,255,255,0.18) 50%,
+          rgba(255,255,255,0.08) 55%,
           transparent 100%
         );
-      opacity: 0.4;
+      opacity: 0.35;
       pointer-events: none;
     }
 
     .hero-inner {
-      max-width: 900px;
-      padding: 0 24px;
       position: relative;
-      z-index: 1;
+      z-index: 2;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 24px;
     }
 
     h1 {
-      font-size: 64px;
+      font-size: 58px;
       font-weight: 500;
       letter-spacing: -0.035em;
-      margin: 0 0 18px;
-      text-align: center;
+      margin: 0 0 16px;
     }
 
     .subtitle {
-      font-size: 18px;
-      font-weight: 400;
-      color: var(--muted);
-      letter-spacing: 0.08em;
+      font-size: 15px;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
+      color: var(--text-muted);
     }
 
     /* ===== MAIN ===== */
@@ -103,19 +135,52 @@
     }
 
     section {
-      margin-bottom: 120px;
+      margin-bottom: 130px;
+      position: relative;
+    }
+
+    /* декоративная линия между секциями */
+    section::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -60px;
+      width: 100%;
+      height: 1px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--metal-soft),
+        transparent
+      );
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 26px;
       font-weight: 500;
       margin-bottom: 24px;
+      position: relative;
+    }
+
+    /* маленький акцент под заголовком */
+    h2::after {
+      content: "";
+      display: block;
+      width: 42px;
+      height: 2px;
+      margin-top: 12px;
+      background: linear-gradient(
+        90deg,
+        var(--accent-cold),
+        transparent
+      );
+      opacity: 0.6;
     }
 
     p {
       max-width: 720px;
       font-size: 17px;
-      color: var(--muted);
+      color: var(--text-muted);
       margin-bottom: 16px;
     }
 
@@ -124,24 +189,28 @@
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 56px;
+      align-items: start;
     }
 
     .photos {
       display: grid;
-      gap: 32px;
+      gap: 28px;
     }
 
     .photos img {
       width: 100%;
       border-radius: 18px;
       filter: grayscale(100%) contrast(1.05);
-      opacity: 0.92;
+      opacity: 0.9;
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .photos figcaption {
       margin-top: 10px;
-      font-size: 14px;
-      color: var(--muted);
+      font-size: 13px;
+      color: var(--text-muted);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
     }
 
     /* ===== MUSIC LINKS ===== */
@@ -153,40 +222,56 @@
     }
 
     .music-links a {
-      display: block;
-      padding: 22px 26px;
-      border-radius: 16px;
+      position: relative;
+      padding: 24px 26px;
+      border-radius: 18px;
       text-decoration: none;
-      color: var(--text);
+      color: var(--text-main);
       background:
         linear-gradient(
           135deg,
-          #14151a 0%,
-          #24262d 45%,
-          #14151a 100%
+          #1d1f26 0%,
+          #2a2d36 45%,
+          #1d1f26 100%
         );
-      border: 1px solid rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.12);
+      overflow: hidden;
+    }
+
+    /* металлический блик на карточках */
+    .music-links a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        120deg,
+        transparent 0%,
+        rgba(255,255,255,0.12) 50%,
+        transparent 100%
+      );
+      opacity: 0.25;
+      pointer-events: none;
     }
 
     .music-links a span {
       display: block;
       font-size: 14px;
-      color: var(--muted);
+      color: var(--text-muted);
       margin-top: 6px;
     }
 
     /* ===== FOOTER ===== */
     footer {
       text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-      padding: 80px 24px 40px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 13px;
+      color: var(--text-muted);
+      padding: 90px 24px 50px;
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     @media (max-width: 900px) {
       h1 {
-        font-size: 44px;
+        font-size: 42px;
       }
 
       .about {
@@ -199,9 +284,10 @@
 <body>
 
   <header class="hero">
+    <div class="shine"></div>
     <div class="hero-inner">
       <h1>Имя артиста</h1>
-      <div class="subtitle">электронная музыка / эмбиент</div>
+      <div class="subtitle">электронная музыка · эмбиент</div>
     </div>
   </header>
 
