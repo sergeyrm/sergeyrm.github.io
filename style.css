@@ -106,29 +106,58 @@ body {
   gap: 40px;
 }
 
-/* PRICING */
+/* PRICING – PREMIUM LIST */
 
-.price-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+.pricing {
+  background: #0e0e10;
+}
+
+.pricing-list {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
 }
 
-.price-card {
-  background: var(--bg-secondary);
-  padding: 40px;
-  border: 1px solid #1f1f1f;
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 32px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.price-card.featured {
-  border-color: var(--accent);
+.pricing-left h3 {
+  font-size: 1.05rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
 }
 
-.price {
-  display: block;
-  margin-top: 20px;
-  font-size: 1.4rem;
-  color: var(--accent);
+.pricing-left p {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.pricing-right {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #e5e5e5;
+  letter-spacing: 0.05em;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .pricing-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pricing-right {
+    font-size: 1rem;
+  }
 }
 
 /* CONTACTS */
