@@ -203,3 +203,33 @@ body::after {
     transform: translateX(100%) translateY(100%);
   }
 }
+
+/* ORDER BLOCK */
+
+.order {
+  padding: 100px 0 80px;
+  text-align: center;
+}
+
+.order-text {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+}
+
+.order-text a {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 1.4rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+.footer {
+  padding: 40px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  background: #050505;
+}
