@@ -207,9 +207,9 @@ body::after {
 
   opacity: 0;
   mix-blend-mode: screen;
-  filter: blur(12px);
+  filter: blur(22px);
 
-  animation: lightSweep 7s linear infinite;
+  animation: lightSweep 3s linear infinite;
 }
 
 @keyframes lightSweep {
