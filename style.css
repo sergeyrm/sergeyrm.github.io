@@ -217,8 +217,3 @@ body {
   color: #666;
   background: #050505;
 }
-
-/* ОТСТУПЫ ДЛЯ p */
-.services p {
-  margin-bottom: 16px;
-}
