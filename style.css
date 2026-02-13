@@ -217,3 +217,16 @@ body {
   color: #666;
   background: #050505;
 }
+
+/* PRINCIPLES LIST */
+
+.principles-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.principles-list li {
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
