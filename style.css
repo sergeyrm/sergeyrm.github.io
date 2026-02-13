@@ -238,14 +238,17 @@ body {
   display: flex;
   gap: 80px;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .about-text {
-  flex: 1.2;
+  flex: 1 1 60%;
+  max-width: 700px;
 }
 
 .about-images {
-  flex: 0.8;
+  flex: 1 1 40%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -253,17 +256,19 @@ body {
 
 .about-image-item img {
   width: 100%;
+  height: auto;
   display: block;
   object-fit: cover;
-  aspect-ratio: 4 / 5;
+  border-radius: 4px;
 }
 
 .about-image-item span {
   display: block;
-  margin-top: 12px;
-  font-size: 0.85rem;
-  opacity: 0.6;
+  margin-top: 8px;
+  font-size: 0.75rem; /* меньше подписи */
+  opacity: 0.55;
 }
+
 
 /* MOBILE */
 
@@ -273,7 +278,17 @@ body {
     gap: 50px;
   }
 
+  .about-text {
+    max-width: 100%;
+  }
+
   .about-images {
+    max-width: 100%;
     gap: 30px;
+  }
+
+  .about-image-item img {
+    width: 100%;
+    max-width: 500px;
   }
 }
