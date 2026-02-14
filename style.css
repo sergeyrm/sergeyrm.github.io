@@ -221,13 +221,13 @@ body {
 /* PRINCIPLES LIST */
 
 .principles-list {
-  list-style: disc inside; /* точки слева */
-  padding-left: 20px;      /* отступ для маркера */
-  margin-top: 20px;        /* расстояние от предыдущего текста */
+  list-style: disc;      /* стандартные точки */
+  padding-left: 22px;    /* точки левее текста */
+  margin-top: 0;
 }
 
 .principles-list li {
-  margin-bottom: 12px;     /* теперь промежуток такой же, как между абзацами */
+  margin-bottom: 12px;   /* небольшой интервал */
   line-height: 1.7;
 }
 
