@@ -308,7 +308,12 @@ body {
 }
 
 .projects h2 {
-  margin-bottom: 50px;
+  margin-bottom: 12px; /* уменьшили расстояние под заголовком */
+}
+
+.projects-intro {
+  margin-top: 0;
+  margin-bottom: 30px; /* аккуратный отступ перед списком */
 }
 
 .projects-list {
