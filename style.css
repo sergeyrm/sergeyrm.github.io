@@ -335,9 +335,9 @@ body {
 }
 
 .project-player-small {
-  flex: 0 1 340px;   /* меньше ширина */
-  max-width: 340px;
-  margin-left: 40px; /* немного ближе к тексту */
+  flex: 0 1 520px;   /* ширина плеера */
+  max-width: 520px;
+  margin-left: 20px; /* немного ближе к тексту */
 }
 
 /* MOBILE */
