@@ -67,6 +67,10 @@ body {
   margin-bottom: 60px;
 }
 
+.about-text h2 {
+  margin-bottom: 16px; /* одинаковый отступ под "Обо мне" и "Мои принципы" */
+}
+
 /* GALLERY */
 
 .gallery-grid {
