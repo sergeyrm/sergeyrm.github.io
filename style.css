@@ -299,6 +299,14 @@ body {
 
 /* PROJECTS */
 
+.projects-intro {
+  margin-bottom: 40px;
+  max-width: 600px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .projects h2 {
   margin-bottom: 50px;
 }
