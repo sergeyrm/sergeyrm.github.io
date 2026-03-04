@@ -23,7 +23,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: #000;
+  background: var(--bg-main); /* фон такой же серый как весь сайт */
   display: flex;
   align-items: center;
   justify-content: center;
