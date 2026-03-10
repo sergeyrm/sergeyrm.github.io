@@ -299,6 +299,11 @@ body {
 
 /* PROJECTS */
 
+.projects {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
 .projects-intro {
   margin-bottom: 40px;
   max-width: 600px;
