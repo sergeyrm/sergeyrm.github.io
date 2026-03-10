@@ -319,7 +319,7 @@ body {
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 20px;
 }
 
 .project-item {
