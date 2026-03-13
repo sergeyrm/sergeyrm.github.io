@@ -383,3 +383,31 @@ body {
     border-bottom: none;
   }
 }
+
+/* FIX: расстояние между музыкой и прайсом */
+
+.projects {
+  padding-bottom: 40px;
+}
+
+.pricing {
+  padding-top: 30px;
+}
+
+/* MOBILE FIX */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 70px 0;
+  }
+
+  .projects {
+    padding-bottom: 20px;
+  }
+
+  .pricing {
+    padding-top: 10px;
+  }
+
+}
