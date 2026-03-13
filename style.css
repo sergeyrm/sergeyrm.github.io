@@ -383,3 +383,26 @@ body {
   }
 
 }
+
+/* ===== MOBILE SPACING FIX ===== */
+
+@media (max-width: 900px) {
+
+  /* уменьшаем общий отступ секций */
+  .section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  /* уменьшаем блок музыки */
+  .projects {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  /* расстояние между песнями */
+  .projects-list {
+    gap: 6px;
+  }
+
+}
