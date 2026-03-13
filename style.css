@@ -406,3 +406,13 @@ body {
   }
 
 }
+
+/* MOBILE FIX — уменьшаем Apple Music плеер */
+
+@media (max-width: 900px) {
+
+  .project-player-small iframe {
+    height: 110px !important;
+  }
+
+}
