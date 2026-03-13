@@ -20,9 +20,10 @@ body {
 }
 
 /* HERO */
+
 .hero {
   height: 100vh;
-  background: var(--bg-main);
+  background: var(--bg-main); /* фон такой же серый как весь сайт */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -42,6 +43,7 @@ body {
 }
 
 /* SECTIONS */
+
 .section {
   padding: 120px 0;
 }
@@ -59,6 +61,7 @@ body {
 }
 
 /* ABOUT */
+
 .text-block {
   max-width: 600px;
   margin-bottom: 60px;
@@ -69,6 +72,7 @@ body {
 }
 
 /* GALLERY */
+
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -99,6 +103,7 @@ body {
 }
 
 /* MUSIC */
+
 .players {
   display: flex;
   flex-direction: column;
@@ -106,6 +111,7 @@ body {
 }
 
 /* PRICING – PREMIUM LIST */
+
 .pricing {
   background: #0e0e10;
 }
@@ -120,6 +126,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 32px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -143,7 +150,22 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* Mobile */
+
+@media (max-width: 600px) {
+  .pricing-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .pricing-right {
+    font-size: 1rem;
+  }
+}
+
 /* CONTACTS */
+
 .contacts {
   background: #050505;
 }
@@ -154,6 +176,7 @@ body {
 }
 
 /* ANIMATIONS */
+
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -170,6 +193,7 @@ body {
 }
 
 /* ORDER BLOCK */
+
 .order {
   padding: 100px 0 80px;
   text-align: center;
@@ -189,6 +213,7 @@ body {
 }
 
 /* FOOTER */
+
 .footer {
   padding: 40px 0;
   text-align: center;
@@ -198,18 +223,21 @@ body {
 }
 
 /* PRINCIPLES LIST */
+
 .principles-list {
-  list-style: disc; /* стандартные точки */
-  padding-left: 22px; /* точки левее текста */
+  list-style: disc;      /* стандартные точки */
+  padding-left: 22px;    /* точки левее текста */
   margin-top: 0;
 }
 
 .principles-list li {
-  margin-bottom: 10px; /* небольшой интервал */
+  margin-bottom: 10px;   /* небольшой интервал */
   line-height: 1.7;
 }
 
+
 /* ABOUT LAYOUT */
+
 .about-layout {
   display: flex;
   gap: 80px;
@@ -245,7 +273,32 @@ body {
   opacity: 0.55;
 }
 
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+  .about-layout {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-images {
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  .about-image-item img {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
 /* PROJECTS */
+
 .projects {
   padding-top: 70px;
   padding-bottom: 70px;
@@ -271,7 +324,7 @@ body {
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 20px; /* расстояние между песнями */
+  gap: 20px;
 }
 
 .project-item {
@@ -305,63 +358,27 @@ body {
 }
 
 .project-player-small {
-  flex: 0 1 520px;
+  flex: 0 1 520px;   /* ширина плеера */
   max-width: 520px;
-  margin-left: 20px;
+  margin-left: 20px; /* немного ближе к тексту */
 }
 
-/* MOBILE STYLES - объединены */
-@media (max-width: 900px) {
-  /* ABOUT */
-  .about-layout {
-    flex-direction: column;
-    gap: 50px;
-  }
-  .about-text {
-    max-width: 100%;
-  }
-  .about-images {
-    max-width: 100%;
-    gap: 30px;
-  }
-  .about-image-item img {
-    width: 100%;
-    max-width: 500px;
-  }
+/* MOBILE */
 
-  /* PROJECTS */
+@media (max-width: 900px) {
   .project-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px; /* расстояние между текстом и плеером */
-    padding-bottom: 10px; /* уменьшаем отступ внизу каждой песни */
+    gap: 15px; /* расстояние между песнями */
   }
 
   .project-player-small {
     width: 100%;
   }
 
-  .projects-list {
-    gap: 10px; /* уменьшаем расстояние между песнями */
-  }
-
-  .projects {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-
+  /* Убираем лишний отступ и границу после последнего проекта */
   .projects-list .project-item:last-child {
     padding-bottom: 0;
     border-bottom: none;
-  }
-
-  /* PRICING */
-  .pricing-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-  }
-  .pricing-right {
-    font-size: 1rem;
   }
 }
