@@ -364,4 +364,19 @@ body {
   .pricing-right {
     font-size: 1rem;
   }
+  /* Уменьшаем расстояние между секциями на мобильных */
+.section {
+  padding: 60px 0;
+}
+
+/* Блок с музыкой ещё компактнее */
+.projects {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+/* расстояние между песнями */
+.projects-list {
+  gap: 8px;
+}
 }
