@@ -23,7 +23,7 @@ body {
 
 .hero {
   height: 100vh;
-  background: var(--bg-main); /* фон такой же серый как весь сайт */
+  background: var(--bg-main);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,8 +44,9 @@ body {
 
 /* SECTIONS */
 
+/* основной вертикальный ритм сайта */
 .section {
-  padding: 120px 0;
+  padding: 100px 0; /* было 120 — чуть уменьшили */
 }
 
 .container {
@@ -57,18 +58,18 @@ body {
 .section-title {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
-  margin-bottom: 60px;
+  margin-bottom: 40px; /* уменьшили расстояние под заголовками */
 }
 
 /* ABOUT */
 
 .text-block {
   max-width: 600px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .about-text h2 {
-  margin-bottom: 16px; /* одинаковый отступ под "Обо мне" и "Мои принципы" */
+  margin-bottom: 16px;
 }
 
 /* GALLERY */
@@ -104,23 +105,30 @@ body {
 
 /* MUSIC */
 
+/* расстояние между плеерами */
 .players {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 25px; /* было 40 — теперь компактнее */
 }
 
 /* PRICING – PREMIUM LIST */
 
 .pricing {
   background: #0e0e10;
-  padding-top: 40px;
+
+  padding-top: 40px; /* уменьшили расстояние от предыдущего блока */
+}
+
+/* расстояние под заголовком "Прайс" */
+.pricing .section-title {
+  margin-bottom: 30px;
 }
 
 .pricing-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 25px; /* немного уменьшили расстояние между строками */
 }
 
 .pricing-row {
@@ -128,7 +136,7 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  padding: 32px 0;
+  padding: 28px 0; /* было 32 */
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -151,18 +159,20 @@ body {
   letter-spacing: 0.05em;
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 600px) {
+
   .pricing-row {
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
+    gap: 14px;
   }
 
   .pricing-right {
     font-size: 1rem;
   }
+
 }
 
 /* CONTACTS */
@@ -196,7 +206,7 @@ body {
 /* ORDER BLOCK */
 
 .order {
-  padding: 100px 0 80px;
+  padding: 80px 0 70px; /* уменьшили вертикальный отступ */
   text-align: center;
 }
 
@@ -226,16 +236,15 @@ body {
 /* PRINCIPLES LIST */
 
 .principles-list {
-  list-style: disc;      /* стандартные точки */
-  padding-left: 22px;    /* точки левее текста */
+  list-style: disc;
+  padding-left: 22px;
   margin-top: 0;
 }
 
 .principles-list li {
-  margin-bottom: 10px;   /* небольшой интервал */
+  margin-bottom: 10px;
   line-height: 1.7;
 }
-
 
 /* ABOUT LAYOUT */
 
@@ -256,7 +265,7 @@ body {
   max-width: 420px;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 35px;
 }
 
 .about-image-item img {
@@ -270,17 +279,21 @@ body {
 .about-image-item span {
   display: block;
   margin-top: 8px;
-  font-size: 0.75rem; /* меньше подписи */
+  font-size: 0.75rem;
   opacity: 0.55;
 }
-
 
 /* MOBILE */
 
 @media (max-width: 900px) {
+
+  .section {
+    padding: 70px 0; /* на мобильных секции компактнее */
+  }
+
   .about-layout {
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
   }
 
   .about-text {
@@ -289,24 +302,25 @@ body {
 
   .about-images {
     max-width: 100%;
-    gap: 30px;
+    gap: 25px;
   }
 
   .about-image-item img {
     width: 100%;
     max-width: 500px;
   }
+
 }
 
-/* PROJECTS */
+/* PROJECTS (музыка) */
 
 .projects {
   padding-top: 70px;
-  padding-bottom: 70px;
+  padding-bottom: 40px; /* уменьшили расстояние перед блоком прайса */
 }
 
 .projects-intro {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   max-width: 600px;
   color: var(--text-muted);
   font-size: 0.95rem;
@@ -314,26 +328,22 @@ body {
 }
 
 .projects h2 {
-  margin-bottom: 12px; /* уменьшили расстояние под заголовком */
-}
-
-.projects-intro {
-  margin-top: 0;
-  margin-bottom: 30px; /* аккуратный отступ перед списком */
+  margin-bottom: 10px;
 }
 
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px; /* уменьшили расстояние между песнями */
 }
 
 .project-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
-  padding-bottom: 15px;
+  gap: 35px;
+
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
@@ -348,7 +358,7 @@ body {
 }
 
 .project-info h3 {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 1.2rem;
 }
 
@@ -359,55 +369,28 @@ body {
 }
 
 .project-player-small {
-  flex: 0 1 520px;   /* ширина плеера */
+  flex: 0 1 520px;
   max-width: 520px;
-  margin-left: 20px; /* немного ближе к тексту */
+  margin-left: 15px;
 }
 
 /* MOBILE */
 
 @media (max-width: 900px) {
+
   .project-item {
     flex-direction: column;
     align-items: flex-start;
-    gap: 15px; /* расстояние между песнями */
+    gap: 10px; /* меньше расстояние между песнями */
   }
 
   .project-player-small {
     width: 100%;
   }
 
-  /* Убираем лишний отступ и границу после последнего проекта */
   .projects-list .project-item:last-child {
     padding-bottom: 0;
     border-bottom: none;
-  }
-}
-
-/* FIX: расстояние между музыкой и прайсом */
-
-.projects {
-  padding-bottom: 40px;
-}
-
-.pricing {
-  padding-top: 30px;
-}
-
-/* MOBILE FIX */
-
-@media (max-width: 768px) {
-
-  .section {
-    padding: 70px 0;
-  }
-
-  .projects {
-    padding-bottom: 20px;
-  }
-
-  .pricing {
-    padding-top: 10px;
   }
 
 }
