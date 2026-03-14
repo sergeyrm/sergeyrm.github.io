@@ -378,15 +378,13 @@ body {
 
 @media (max-width: 900px) {
 
-  .project-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px; /* меньше расстояние между песнями */
+  .project-player-small {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
   }
 
-  .project-player-small {
-    width: 100%;
-  }
+}
 
   .projects-list .project-item:last-child {
     padding-bottom: 0;
